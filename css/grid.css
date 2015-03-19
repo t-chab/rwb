@@ -1,0 +1,66 @@
+/*
+    Ici les propriétés CSS s'appliquent à toutes les tailles d'écrans,
+    sans exception
+ */
+
+[class*=l-]
+
+
+.l-col-12 {
+    width: 100%;
+    float: left;
+}
+
+/* media queries pour les tablettes */
+@media only screen and (max-width: 800px) {
+    /*
+        ici les propriétés CSS ne seront interprétées que par les écrans
+        dont la largeur en pixel est inférieure à 800px
+    */
+   .l-col-4 {
+        width: 100%;
+        background: red;
+    }
+   .m-col-4 {
+        width: 33%;
+        background: yellow;
+    }
+}
+
+/* tous les smartphones en mode portrait */
+@media only screen and (max-width: 640px) {
+    /*
+        ici les propriétés CSS ne seront interprétées que par les écrans
+        dont la largeur en pixel est inférieure à 640px
+    */
+   .l-col-4 {
+        width: 100%;
+        background: orange;
+    }
+    .m-col-4 {
+        width: 100%;
+    }
+    .s-col-4 {
+        width: 33%;
+        background: green;
+    }
+}
+
+/* tous les smartphones en mode horizontal */
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+    /*
+        ici les propriétés CSS ne seront interprétées que par les écrans
+        dont la largeur en pixel est inférieure à 640px
+    */
+   .l-col-4 {
+        width: 100%;
+        background: orange;
+    }
+    .m-col-4 {
+        width: 100%;
+    }
+    .s-col-4 {
+        width: 33%;
+        background: green;
+    }
+}

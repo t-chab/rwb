@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Comportement des balises</title>
+        <meta name="description" content="comment se comporte les balises">
+    </head>
+    <body>
+        <h1>balises bloc :</h1>
+        <ul>
+            <li>par défaut largeur du parent</li>
+            <li>par defaut hauteur du contenu</li>
+            <li>elles peuvent contenir d'autres éléments de type bloc
+            ou inline</li>
+            <li>se positionnent normalement dans le flux les unes sous
+            les autres</li>
+        </ul>
+        <p>en css on peut leur affecter</p>
+        <ul>
+            <li> un margin en top, bottom, right et left</li>
+            <li> un padding en top, bottom, right et left</li>
+        </ul>
+        <p>&lt;div&gt; est la balise neutre de type bloc</p>
+        <h1>balises inline (a, span, sup etc ...)</h1>
+        <ul>
+            <li>par défaut font la largeur du contenu</li>
+            <li>par défaut font la hauteur du contenu</li>
+            <li>depuis html5, elles peuvent contenir d'autres éléments de type
+            bloc ou inline à condition de respecter le flow content
+            (flux de contenu logique)</li>
+            <li>se positionnent normalement dans le flux les unes à côté des
+            autres</li>
+        </ul>
+        <p>en css on peut leur affecter</p>
+        <ul>
+            <li>on peut leur affecter un margin uniquement en top et bottom</li>
+            <li>on peut leur affecter un margin uniquement en top, bottom right et left</li>
+        </ul>
+        <p>&lt;span&gt; est la balise neutre de type inline</p>
+    </body>
+</html>

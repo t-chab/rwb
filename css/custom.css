@@ -1,0 +1,41 @@
+.l-col-4 {
+    width: 33%;
+    background: blue;
+    float: left;
+}
+
+/* selecteur simple */
+p {
+    color: blue;
+}
+
+/* id */
+/* cible l'élément avec l'attribut id="red" */
+#red {
+    color: red;
+}
+
+/* selecteur de classe */
+/* cible tous les éléments qui portent l'attribut class="green*/
+.green {
+    color: green;
+}
+
+/* cible l'élément p id="red" */
+p#red {
+    color: brown;
+}
+
+/* le sélecteur hiérarchique */
+/* cible tous les éléments span descendants d'éléments p */
+p span {
+    color: orange;
+}
+
+/*cible un span descendant direct (enfant direct de p)*/
+p>span {
+
+}
+
+/* attention ne pas confondre avec p,span qui cible tous les éléments p ET
+tous les éléments span du document */
