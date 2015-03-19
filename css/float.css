@@ -1,0 +1,58 @@
+.container {
+    width: 500px;
+    background: #2EA2E0;
+    overflow: hidden;
+    /*
+    en mettant le container en overflow: hidden on modifie son comportement
+    il considère ses enfants en float pour le calcul de sa hauteur.
+    overflow hidden ne peut pas être utilisé dans tous les cas car il va masquer
+    tous les éléments qui dépassent du container (ex: un sous menu déroulant
+    dans un header ne se verra jamais).
+    */
+}
+
+[class*=top-], [class*=bottom-] {
+    width: 200px;
+    height: 200px;
+}
+
+.top-left {
+    background: violet;
+    float: left;
+}
+/* quand on met un élément en float, on le sort du flux de positionnement,
+ mais il reste enfermé dans son parent pour autant. Comme on le sort du flux,
+ l'élément suivant prend sa place. */
+
+.top-right {
+    background: green;
+    float: left;
+}
+
+.bottom-left {
+    background: orange;
+    float: left;
+}
+
+.bottom-right {
+    background: red;
+    float: left;
+}
+
+/* le container finit par faire 0px si on met tout en float: left, car ses
+enfants son tous sortis du flux de positionnement normal. C'est le comportement
+normal d'un bloc. Nous pouvons modifier légérement ce comportement
+en CSS notamment avec la propriété overflow (mais pas uniquement) */
+
+
+.footer {
+    background: yellow;
+    float: left;
+    width: 100%;
+}
+
+.footer2 {
+    background: cyan;
+    clear: both; /* permet de mettre un élément dans le flux à la
+    suite de float */
+}
