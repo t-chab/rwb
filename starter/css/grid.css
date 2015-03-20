@@ -1,25 +1,37 @@
 /*
-    Ici les propriétés CSS s'appliquent à toutes les tailles d'écrans,
-    sans exception
- */
+Ici les propriétés CSS s'appliquent à toutes les tailles d'écrans,
+sans exception
+*/
 
 /**
- * .wrapper : site full width
- * .container : site centré au milieu de l'écran
- * .row pour gérer les éléments sous forme de ligne
- */
+* .wrapper : site full width
+* .container : site centré au milieu de l'écran
+* .row pour gérer les éléments sous forme de ligne
+*/
 
-[class*=l-col-], [class*=m-col-], [class*=s-col-], [class*=sl-col-], .wrapper,
-    .container, .row {
+[class*=l-col], [class*=m-col], [class*=s-col], [class*=sl-col], .wrapper,
+.container, .row {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-    /* ------------------------ pour voir les blocs ------------------------- */
-    /* ------------------------ TODO : commenter en prod--------------------- */
+/* ------------------------ pour voir les blocs ------------------------- */
+/* ------------------------ TODO : commenter en prod--------------------- */
     background: rgba(144, 193, 242, 0.5);
-    padding: 10px;
+/*     padding: 10px;
+ */
     margin: 10px 0px;
     border: 1px solid #080adb;
-    /* ------------------------------ END ----------------------------------- */
+/* ------------------------------ END ----------------------------------- */
+}
+
+.gutters [class*=l-col] {
+    padding: 0 10px;
+}
+
+[class*=l-col].no-gutters {
+    /* supprime les padding left et right pour l'element
+    sur lequel on applique cette classe*/
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .wrapper {
@@ -28,85 +40,262 @@
 }
 
 .wrapper:after, .wrapper:before, .container:after, .container:before,
-    .row:after, .row:before {
-    display: table;
-    content: "";
-    clear: both;
-    height: 0px; /* IE dirty workaround */
+.row:after, .row:before {
+display: table;
+content: "";
+clear: both;
+height: 0px; /* IE dirty workaround */
 }
 
 img {
-    width: 100%;
-    height: auto;
-    vertical-align: middle; /* supprime l'espace de quelques pixels sous les images */
+width: 100%;
+height: auto;
+vertical-align: middle; /* supprime l'espace de quelques pixels sous les images */
 }
 
 a {
-    outline: none; /* supprime les cadres bleu autour des images insérées dans
-    les liens avec IE */
+outline: none; /* supprime les cadres bleu autour des images insérées dans
+les liens avec IE */
 }
 
 .container {
-    max-width: 960px; /* à changer si je veux passer un site plus large et que
-    tous ses enfants s'adaptent automatiquement */
-    margin: auto
+max-width: 960px; /* à changer si je veux passer un site plus large et que
+tous ses enfants s'adaptent automatiquement */
+margin: auto
+}
+
+[class*=l-col-] {
+float: left;
 }
 
 .l-col-12 {
-    width: 100%;
-    float: left;
+width: 100%;
+}
+
+.l-col-11 {
+width: 91.66667%;
+}
+
+.l-col-10 {
+width: 83.3333%;
+}
+
+.l-col-9 {
+width: 75%;
+}
+
+.l-col-8 {
+width: 66.6667%;
+}
+
+.l-col-7 {
+width: 58.3333%;
+}
+
+.l-col-6 {
+width: 50%;
+}
+
+.l-col-5 {
+width: 41.6667%;
+}
+
+.l-col-4 {
+width: 33.3333%;
+}
+
+.l-col-3 {
+width: 25%;
+}
+
+.l-col-2 {
+width: 16.6667%;
+}
+
+.l-col-1 {
+width: 8.3333%;
 }
 
 /* media queries pour les tablettes */
 @media only screen and (max-width: 800px) {
-    /*
-        ici les propriétés CSS ne seront interprétées que par les écrans
-        dont la largeur en pixel est inférieure à 800px
+/*
+    ici les propriétés CSS ne seront interprétées que par les écrans
+    dont la largeur en pixel est inférieure à 800px
     */
-   .l-col-4 {
+    [class*=l-col-] {
         width: 100%;
-        background: red;
     }
-   .m-col-4 {
-        width: 33%;
-        background: yellow;
+
+    [class*=m-col-] {
+        float: left;
+    }
+
+    .m-col-12 {
+        width: 100%;
+    }
+
+    .m-col-11 {
+        width: 91.66667%;
+    }
+
+    .m-col-10 {
+        width: 83.3333%;
+    }
+
+    .m-col-9 {
+        width: 75%;
+    }
+    .m-col-8 {
+        width: 66.6667%;
+    }
+
+    .m-col-7 {
+        width: 58.3333%;
+    }
+
+    .m-col-6 {
+        width: 50%;
+    }
+
+    .m-col-5 {
+        width: 41.6667%;
+    }
+
+    .m-col-4 {
+        width: 33.3333%;
+    }
+
+    .m-col-3 {
+        width: 25%;
+    }
+
+    .m-col-2 {
+        width: 16.6667%;
+    }
+
+    .m-col-1 {
+        width: 8.3333%;
     }
 }
 
 /* tous les smartphones en mode portrait */
 @media only screen and (max-width: 640px) {
-    /*
-        ici les propriétés CSS ne seront interprétées que par les écrans
-        dont la largeur en pixel est inférieure à 640px
+/*
+    ici les propriétés CSS ne seront interprétées que par les écrans
+    dont la largeur en pixel est inférieure à 640px
     */
-   .l-col-4 {
-        width: 100%;
-        background: orange;
-    }
-    .m-col-4 {
+
+    [class*=m-col-] {
         width: 100%;
     }
+
+    [class*=s-col-] {
+        float: left;
+    }
+
+    .s-col-12 {
+        width: 100%;
+    }
+
+    .s-col-11 {
+        width: 91.66667%;
+    }
+
+    .s-col-10 {
+        width: 83.3333%;
+    }
+
+    .s-col-9 {
+        width: 75%;
+    }
+    .s-col-8 {
+        width: 66.6667%;
+    }
+
+    .s-col-7 {
+        width: 58.3333%;
+    }
+
+    .s-col-6 {
+        width: 50%;
+    }
+
+    .s-col-5 {
+        width: 41.6667%;
+    }
+
     .s-col-4 {
-        width: 33%;
-        background: green;
+        width: 33.3333%;
+    }
+
+    .s-col-3 {
+        width: 25%;
+    }
+
+    .s-col-2 {
+        width: 16.6667%;
+    }
+
+    .s-col-1 {
+        width: 8.3333%;
     }
 }
 
 /* tous les smartphones en mode horizontal */
 @media only screen and (max-width: 640px) and (orientation: landscape) {
     /*
-        ici les propriétés CSS ne seront interprétées que par les écrans
-        dont la largeur en pixel est inférieure à 640px
+    ici les propriétés CSS ne seront interprétées que par les écrans
+    dont la largeur en pixel est inférieure à 640px
     */
-   .l-col-4 {
-        width: 100%;
-        background: orange;
+
+    [class*=sl-col-] {
+        float: left;
     }
-    .m-col-4 {
+
+    .sl-col-12 {
         width: 100%;
     }
-    .s-col-4 {
-        width: 33%;
-        background: green;
+
+    .sl-col-11 {
+        width: 91.66667%;
+    }
+
+    .sl-col-10 {
+        width: 83.3333%;
+    }
+
+    .sl-col-9 {
+        width: 75%;
+    }
+    .sl-col-8 {
+        width: 66.6667%;
+    }
+
+    .sl-col-7 {
+        width: 58.3333%;
+    }
+
+    .sl-col-6 {
+        width: 50%;
+    }
+
+    .sl-col-5 {
+        width: 41.6667%;
+    }
+
+    .sl-col-4 {
+        width: 33.3333%;
+    }
+
+    .sl-col-3 {
+        width: 25%;
+    }
+
+    .sl-col-2 {
+        width: 16.6667%;
+    }
+
+    .sl-col-1 {
+        width: 8.3333%;
     }
 }
