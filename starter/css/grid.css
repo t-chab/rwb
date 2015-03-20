@@ -27,6 +27,12 @@ sans exception
     padding: 0 10px;
 }
 
+/* gestion des débordements de textes */
+p {
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
 [class*=l-col].no-gutters {
     /* supprime les padding left et right pour l'element
     sur lequel on applique cette classe*/
@@ -41,79 +47,79 @@ sans exception
 
 .wrapper:after, .wrapper:before, .container:after, .container:before,
 .row:after, .row:before {
-display: table;
-content: "";
-clear: both;
-height: 0px; /* IE dirty workaround */
+    display: table;
+    content: "";
+    clear: both;
+    height: 0px; /* IE dirty workaround */
 }
 
 img {
-width: 100%;
-height: auto;
-vertical-align: middle; /* supprime l'espace de quelques pixels sous les images */
+    width: 100%;
+    height: auto;
+    vertical-align: middle; /* supprime l'espace de quelques pixels sous les images */
 }
 
 a {
-outline: none; /* supprime les cadres bleu autour des images insérées dans
+    outline: none; /* supprime les cadres bleu autour des images insérées dans
 les liens avec IE */
 }
 
 .container {
-max-width: 960px; /* à changer si je veux passer un site plus large et que
-tous ses enfants s'adaptent automatiquement */
-margin: auto
+    max-width: 960px; /* à changer si je veux passer un site plus large et que
+    tous ses enfants s'adaptent automatiquement */
+    margin: auto
 }
 
 [class*=l-col-] {
-float: left;
+    float: left;
 }
 
 .l-col-12 {
-width: 100%;
+    width: 100%;
 }
 
 .l-col-11 {
-width: 91.66667%;
+    width: 91.66667%;
 }
 
 .l-col-10 {
-width: 83.3333%;
+    width: 83.3333%;
 }
 
 .l-col-9 {
-width: 75%;
+    width: 75%;
 }
 
 .l-col-8 {
-width: 66.6667%;
+    width: 66.6667%;
 }
 
 .l-col-7 {
-width: 58.3333%;
+    width: 58.3333%;
 }
 
 .l-col-6 {
-width: 50%;
+    width: 50%;
 }
 
 .l-col-5 {
-width: 41.6667%;
+    width: 41.6667%;
 }
 
 .l-col-4 {
-width: 33.3333%;
+    width: 33.3333%;
 }
 
 .l-col-3 {
-width: 25%;
+    width: 25%;
 }
 
 .l-col-2 {
-width: 16.6667%;
+    width: 16.6667%;
 }
 
 .l-col-1 {
-width: 8.3333%;
+    width: 8.3333%;
 }
 
 /* media queries pour les tablettes */
