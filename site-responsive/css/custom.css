@@ -151,6 +151,11 @@ h3 {
     en x et en y par rapport au dernier parent non static */
     top: 5px;
     right: 5px;
+    display: none;
+}
+
+nav {
+    display: block;
 }
 
 /**
@@ -171,6 +176,13 @@ h3 {
         width: 100%;
     }
 
+    .btn-nav {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
 }
 
 
