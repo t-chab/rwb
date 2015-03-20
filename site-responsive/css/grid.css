@@ -15,11 +15,11 @@ sans exception
     -moz-box-sizing: border-box;
 /* ------------------------ pour voir les blocs ------------------------- */
 /* ------------------------ TODO : commenter en prod--------------------- */
+/*
     background: rgba(144, 193, 242, 0.5);
-/*     padding: 10px;
- */
     margin: 10px 0px;
     border: 1px solid #080adb;
+*/
 /* ------------------------------ END ----------------------------------- */
 }
 

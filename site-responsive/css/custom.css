@@ -1,0 +1,158 @@
+/**
+ * Polices
+ */
+
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("../fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+
+#main-header, #main-footer, .bgblack {
+    background: black;
+}
+
+#bandeau {
+    background: linear-gradient(to bottom right, rgb(0,183,234) 0%, rgb(0,158,195) 100%);
+}
+
+.bgpink {
+    background: #bf0060;
+}
+
+.content {
+    background: #DBDBDB;
+}
+
+#logo a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0 10px 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Condensed";
+}
+
+p, a, span, li {
+    font-family: "Open Sans";
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 13px 15px;
+}
+
+nav ul li a:hover, .active {
+    background: #3B3B3B;
+    color: #009ec3;
+}
+
+#bandeau {
+    padding: 0 15px;
+}
+
+h1, h2 {
+    font-weight: bold;
+    margin: 1em 0;
+    color: #fff;
+}
+
+#bandeau h1 {
+    font-size: 3em;
+}
+
+#bandeau h1 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.6em;
+    margin: 1em 0;
+}
+
+.bgblack h3 {
+    color: #ffc6e2;
+    font-weight: lighter;
+    padding-left: 15px;
+}
+
+.bgpink a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.content {
+    padding: 0 15px;
+}
+
+.content h1 {
+    font-size: 1.5em;
+    color: black;
+    margin: 1em 0;
+}
+
+.content p {
+    font-size: 1em;
+    color: black;
+    margin: 1em 0;
+}
+
+#main-footer p, #main-footer a {
+    font-size: 0.8em;
+    color: #fff;
+    text-decoration: none;
+}
+
+#main-footer a:hover {
+    color: #009ec3;
+}
+
+#main-footer div:nth-of-type(2) {
+    text-align: center;
+};
+
+#main-footer div:nth-of-type(3) {
+    text-align: right;
+};
+
+#main-footer {
+    padding: 15px;
+};
+
+#main-footer a {
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 800px) {
+}
+
+
+@media only screen and (max-width: 640px) {
+    #main-footer div {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+}
