@@ -144,13 +144,43 @@ h3 {
     font-size: 1em;
 }
 
+.btn-nav {
+    width: 35px;
+    height: 35px;
+    position: absolute; /* sorti du flux complêtement, se positionne
+    en x et en y par rapport au dernier parent non static */
+    top: 5px;
+    right: 5px;
+}
+
+/**
+ * en positionnement relatif on peut positionner en x et en y par rapport
+ * au point d'origine dans le flux. la place est conservée dans le flux,
+ * et ne perturbe pas les autres éléments du dom. le bloc viendra se positionner
+ * par dessus.
+ * positionnement absolute : positionnement par rapport au dernier parent
+ * non static, et sort complètement l'élément du flux;
+ *
+ */
+
 @media only screen and (max-width: 800px) {
+    nav ul {
+        width: 100%;
+    }
+    nav ul li {
+        width: 100%;
+    }
+
 }
 
 
 @media only screen and (max-width: 640px) {
-    #main-footer div {
+    #main-footer div, #main-footer div p {
         text-align: center;
+        margin: .3em 0;
+    }
+    .bgblack, .bgpink {
+        font-size: 80%;
     }
 }
 
